@@ -32,7 +32,7 @@ class Options extends React.Component {
         }
         if (x === 1)
             selected.push(event.target.value);
-        this.setState({ selected });
+        this.setState({ selected });                    //this is not working
         console.log('QuestionId:', this.state.userAnswers.questionId);
         console.log('Selected:', selected);
     }
