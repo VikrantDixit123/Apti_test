@@ -8,14 +8,7 @@ class Options extends React.Component {
         super(props);
 
         this.state = {
-            /**
-             * Final state:
-             * Structure of userAnswers:
-             * {
-             *   "questionId": 1,
-             *   "selected": [selectedValues]
-             * }      
-             */
+            
             userAnswers: {
                 "questionId": this.props.questionId,
                 "selected": []
@@ -38,25 +31,25 @@ class Options extends React.Component {
             }
         }
         if (x === 1) 
-            selected.push(event.target.value);                    
-        this.setState({ selected });
+            selected.push(event.target.value);                                  
+        let userAnswers = {...this.state.userAnswers, selected}
+        this.setState({userAnswers})
         console.log('QuestionId:', this.state.userAnswers.questionId);
         console.log('Selected:', selected);
     }
 
     handleRadioToggle = event => {
         let selected = [...this.state.userAnswers.selected];
-        selected = event.target.value;
-        this.setState({selected});
+        selected = event.target.value;        
+        let userAnswers = {...this.state.userAnswers, selected}
+        this.setState({userAnswers})
         console.log('QuestionId:', this.state.userAnswers.questionId);
         console.log("Selected: ", selected);
     }
 
 
     render() {
-        /**    
-         * Notice we are not using "questionId" below but it is available in props.
-        */
+
         const { options, type } = this.props;
 
         if (type === "checkbox") {
