@@ -12,20 +12,21 @@ class Options extends React.Component {
             userAnswers: {
                 "questionId": this.props.questionId,
                 "selected": []
-            },                  
+            },
         };
 
         this.handleCheckBoxToggle = this.handleCheckBoxToggle.bind(this);
         this.handleRadioToggle = this.handleRadioToggle.bind(this);
     }
 
+
     handleCheckBoxToggle = event => {
-        let x = 1;        
-        let selected = [...this.state.userAnswers.selected];    
-        console.log('Selected:', selected);    
+        let x = 1;
+        let selected = [...this.state.userAnswers.selected];
+        console.log('Selected:', selected);
         for (let i = 0; i < 4; i++) {
             if (selected[i] === event.target.value) {
-                selected.splice(i, 1);                
+                selected.splice(i, 1);
                 x = 2;
                 break;
             }
@@ -49,7 +50,6 @@ class Options extends React.Component {
 
 
     render() {
-
         const { options, type } = this.props;
 
         if (type === "checkbox") {
@@ -63,7 +63,8 @@ class Options extends React.Component {
                         })
                     }
                 </div>
-            )
+
+            );
         }
         if (type === "radio") {
             return (
@@ -77,9 +78,9 @@ class Options extends React.Component {
                     }
                 </div>
             );
+
+            return null;
         }
-        return null;
     }
 }
-
 export default Options;

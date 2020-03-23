@@ -12,9 +12,9 @@ import { questionsData } from './json/questions';
 import store from './redux/Store';
 
 class App extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     return (
@@ -23,6 +23,7 @@ class App extends React.Component {
       <Provider store = {store}>
       <div className="main-class">
         <h1>Below are the sample questions:</h1>
+        <br></br>
         {
           
           questionsData.map((question, index) => {        

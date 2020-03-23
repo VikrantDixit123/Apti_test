@@ -44,28 +44,5 @@ export const questionsData = [
 				"value": "js"
 			}
 		]
-	},
-	{
-		"id": 3,
-		"type": "checkbox",
-		"questionText": "Which of the following is not used for backend ?",
-		"options": [
-			{
-				"key": "PHP",
-				"value": "PHP"
-			},
-			{
-				"key": "HTML",
-				"value": "HTML"
-			},
-			{
-				"key": "CSS",
-				"value": "CSS"
-			},
-			{
-				"key": "Node",
-				"value": "Node"
-			}
-		]
 	}
 ];
