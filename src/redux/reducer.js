@@ -1,4 +1,4 @@
-import { CheckboxAction } from "./CheckboxAction"
+import { CHECKBOX_ACTION } from "./CheckboxAction"
 
 const initialState = {
     selected: []
@@ -7,8 +7,9 @@ console.log("In reducer");
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case CheckboxAction: return {
+        case CHECKBOX_ACTION: return {
             ...state,
+            selected: state.selected + 1
         }
         default: return state
     }

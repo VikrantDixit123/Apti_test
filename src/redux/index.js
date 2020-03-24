@@ -1,1 +1,1 @@
-export {action} from './Actions'
+export {checkboxAction} from './Actions'

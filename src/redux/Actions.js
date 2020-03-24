@@ -1,8 +1,8 @@
-import {CheckboxAction} from './CheckboxAction'
+import {CHECKBOX_ACTION} from './CheckboxAction'
 
-export const action = () =>{
+export const checkboxAction = () =>{
     return {
-        type: CheckboxAction
+        type: CHECKBOX_ACTION
     }
 }
 console.log("Action Initiated");
