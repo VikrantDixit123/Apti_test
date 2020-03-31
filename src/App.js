@@ -12,10 +12,7 @@ import { questionsData } from './json/questions';
 import store from './redux/Store';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+ 
   render() {
     return (
       // NOTE: When we need to use styling try to use className as best practice.

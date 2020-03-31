@@ -7,7 +7,7 @@ function Checkbox(props) {
         <div className="checkbox-options">
             {<input className="input-checkbox" type="checkbox" value={props.label} onChange={props.CheckboxAction} />}
             <label>{props.label}</label>
-            <h1>{props.selected}</h1>
+            <h1>{console.log(props.selected)}</h1>
         </div>
     );
 }

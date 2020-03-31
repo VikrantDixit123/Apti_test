@@ -5,4 +5,3 @@ export const checkboxAction = () =>{
         type: CHECKBOX_ACTION
     }
 }
-console.log("Action Initiated");
