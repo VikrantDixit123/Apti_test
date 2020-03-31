@@ -44,5 +44,28 @@ export const questionsData = [
 				"value": "js"
 			}
 		]
+	},
+	{
+		"id": 3,
+		"type": "checkbox",
+		"questionText": "Which of the following is part of India ?",
+		"options": [
+			{
+				"key": "Maharashtra",
+				"value": "Maharashtra"
+			},
+			{
+				"key": "Dubai",
+				"value": "Dubai"
+			},
+			{
+				"key": "Delhi",
+				"value": "Delhi"
+			},
+			{
+				"key": "LosAngeles",
+				"value": "LosAngeles"
+			}
+		]
 	}
 ];

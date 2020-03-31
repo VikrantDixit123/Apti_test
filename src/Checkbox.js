@@ -1,30 +1,16 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { checkboxAction } from './redux'
+import React from 'react';
 
 function Checkbox(props) {
     return (
         <div className="checkbox-options">
-            {<input className="input-checkbox" type="checkbox" value={props.label} onChange={props.CheckboxAction} />}
+            {<input className="input-checkbox" type="checkbox" value={props.value} onChange={props.onChange} checked={props.checked} />}
             <label>{props.label}</label>
+<<<<<<< HEAD
             <h1>{console.log(props.selected)}</h1>
+=======
+>>>>>>> aa009d3332778e4bf7b1f70ebbc85984adb52f6d
         </div>
     );
 }
 
-const mapStateToProps = state => {
-    return {
-        selected: state.selected
-    }
-}
-
-const mapDispatchToProps = dispatch => {
-    return {
-        CheckboxAction: () => dispatch(checkboxAction())
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Checkbox)
+export default Checkbox;

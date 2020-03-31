@@ -3,84 +3,40 @@ import React from 'react';
 import Radio from './Radio';
 import Checkbox from './Checkbox';
 
-class Options extends React.Component {
-    constructor(props) {
-        super(props);
+function Options(props) {
+    const { options, type, _this, selectedAnswer } = props;
+    if (type === "checkbox") {
+        return (
+            <div>
+                {
+                    options.map((option, index) => {
+                        return (
+                            <Checkbox key={index} label={option.key} value={option.value} onChange={_this.handleCheckboxToggle}
+                                checked={typeof selectedAnswer !== 'undefined' && selectedAnswer.includes(option.value)}
+                            />
+                        );
+                    })
+                }
+            </div>
 
-        this.state = {
-            
-            userAnswers: {
-                "questionId": this.props.questionId,
-                "selected": []
-            },
-        };
-
-        this.handleCheckBoxToggle = this.handleCheckBoxToggle.bind(this);
-        this.handleRadioToggle = this.handleRadioToggle.bind(this);
+        );
     }
-
-
-    handleCheckBoxToggle = event => {
-        let x = 1;
-        let selected = [...this.state.userAnswers.selected];
-        console.log('Selected:', selected);
-        for (let i = 0; i < 4; i++) {
-            if (selected[i] === event.target.value) {
-                selected.splice(i, 1);
-                x = 2;
-                break;
-            }
-        }
-        if (x === 1) 
-            selected.push(event.target.value);                                  
-        let userAnswers = {...this.state.userAnswers, selected}
-        this.setState({userAnswers})
-        console.log('QuestionId:', this.state.userAnswers.questionId);
-        console.log('Selected:', selected);
+    if (type === "radio") {
+        return (
+            <div>
+                {
+                    options.map((option, index) => {
+                        return (
+                            <Radio key={index} label={option.key} value={option.value} onChange={_this.handleRadioToggle}
+                                checked={typeof selectedAnswer !== 'undefined' && selectedAnswer.includes(option.value)}
+                            />
+                        );
+                    })
+                }
+            </div>
+        );
     }
-
-    handleRadioToggle = event => {
-        let selected = [...this.state.userAnswers.selected];
-        selected = event.target.value;        
-        let userAnswers = {...this.state.userAnswers, selected}
-        this.setState({userAnswers})
-        console.log('QuestionId:', this.state.userAnswers.questionId);
-        console.log("Selected: ", selected);
-    }
-
-
-    render() {
-        const { options, type } = this.props;
-
-        if (type === "checkbox") {
-            return (
-                <div>
-                    {
-                        options.map((option, index) => {
-                            return (
-                                <Checkbox key={index} label={option.key} value={option.value} handleCheckBoxToggle={this.handleCheckBoxToggle} />
-                            );
-                        })
-                    }
-                </div>
-
-            );
-        }
-        if (type === "radio") {
-            return (
-                <div>
-                    {
-                        options.map((option, index) => {
-                            return (
-                                <Radio key={index} label={option.key} value={option.value} handleCheckBoxToggle={this.handleRadioToggle} />
-                            );
-                        })
-                    }
-                </div>
-            );
-
-            return null;
-        }
-    }
+    return null;
 }
+
 export default Options;
