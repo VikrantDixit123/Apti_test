@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 /***** Components *****/
-import App from './App';
+import Counter from './Counter';
 /***** Styles *****/
 /**
  * NOTE: Importing styles.css in index.js. 
@@ -14,9 +14,10 @@ import { Provider } from 'react-redux';
 import configureStore from './config/configureStore';
 const store = configureStore();
 
+
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <Counter startCount={10} />
     </Provider>,
     document.getElementById('root'));
 
