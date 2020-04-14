@@ -4,14 +4,15 @@ import Radio from './Radio';
 import Checkbox from './Checkbox';
 
 function Options(props) {
-    const { options, type, _this, selectedAnswer } = props;
+    const { options, type, questionId, _this, selectedAnswer } = props;
     if (type === "checkbox") {
         return (
             <div>
                 {
                     options.map((option, index) => {
                         return (
-                            <Checkbox key={index} label={option.key} value={option.value} onChange={_this.handleCheckboxToggle}
+                            <Checkbox key={index} label={option.key} value={option.value}
+                                onChange={(event) => _this.handleCheckboxToggle(event, questionId)}
                                 checked={typeof selectedAnswer !== 'undefined' && selectedAnswer.includes(option.value)}
                             />
                         );
@@ -27,7 +28,8 @@ function Options(props) {
                 {
                     options.map((option, index) => {
                         return (
-                            <Radio key={index} label={option.key} value={option.value} onChange={_this.handleRadioToggle}
+                            <Radio key={index} label={option.key} value={option.value}
+                                onChange={(event) => _this.handleRadioToggle(event, questionId)}
                                 checked={typeof selectedAnswer !== 'undefined' && selectedAnswer.includes(option.value)}
                             />
                         );

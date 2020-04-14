@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-width: 1300px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    
+    height: 50px;
+    width: 150px;
+}
+
+.header {
+    color: white;
+    font-size: 30px;
+    padding-top: 10px;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 7vh;
+    background-color: rgb(76, 75, 82);
+}
+
+.footer {
+    padding-top: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    background-color: rgb(76, 75, 82);
+    color: white;
+    text-align: center;
+}
+
+.main-class {
+    margin: 10px;
+}
+
+.checkbox-options {
+    margin: 15px 0 15px 15px;
+}
+
+.radio-options {
+    margin: 15px 0 15px 15px;
+}
+
+.input-checkbox {
+    margin-right: 5px;
+}
+
+.Time {
+    color: red;
+    float: right;
+    padding-right: 20px;
+}
+
+h3{
+    text-align: center;
+    font-size: 30px;
+}
+
+textarea{
+    margin: 20px 0px;
+    width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+.login-main{
+    padding-top: 30px;
+    margin: 0px;
+    background-color: #D5D9DF;
+    height: 600px;
+}
+.login {
+    background-color: #9CB0CB;
+    padding: 20px;
+    padding-left: 70px;
+    padding-bottom: 50px;
+    width: 300px;
+    margin: 10px auto;
+    text-align: left;
+    border: black;
+}
+
+.login-text{
+    font-size: 15px;
+}
+
+.login-input {
+    width: 250px;
+    padding: 7px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.login-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    margin-top: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 250px;
+}
+
+.logout-btn{
+    margin:12px;
+    background-color: #4CAF50 ;
+    border: none;
+    color: white;
+    float: right;
+}
+
+.feedback-btn{
+    background-color: #4CAF90;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    width: 100px;
+
+}
+
+.end-test-btn{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    margin-top: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 150px;
+}
+
+.instructions {
+    margin: 50px auto;
+    width: 300px;
+    text-align: left;
+}
+h4{
+    text-align: center;
+}
+
+.logout {
+    width: 600px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
