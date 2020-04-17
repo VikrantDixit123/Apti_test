@@ -37,25 +37,25 @@ class QuestionContainer extends React.Component {
     }
 
     return (
-      <React.Fragment>
-        <h2 className="Time">
-          <Timer time={this.props.time} />
-        </h2>
-        <br /><br />
-        <div className="logout-btn">
-          <button className="logout-btn" onClick={this.handleLogout}>Logout</button>
-        </div>
-        {
-          questionsData.map((question, index) => {
-            return (
-              <div key={index}>
-                <Question questionText={question.questionText} questionNumber={index + 1} />
-                <Options options={question.options} type={question.type} questionId={question.id}
-                  selectedAnswer={this.props.userAnswers[question.id]} _this={this} />
-              </div>
-            )
-          })
-        }
+      <React.Fragment>        
+          <h2 className="Time">
+            <Timer time={this.props.time} />
+          </h2>
+          <br /><br />
+          <div className="logout-btn">
+            <button className="logout-btn" onClick={this.handleLogout}>Logout</button>
+          </div>
+          {
+            questionsData.map((question, index) => {
+              return (
+                <div key={index} >
+                  <Question questionText={question.questionText} questionNumber={index + 1} />
+                  <Options options={question.options} type={question.type} questionId={question.id}
+                    selectedAnswer={this.props.userAnswers[question.id]} _this={this} />
+                </div>
+              )
+            })
+          }        
       </React.Fragment>
     );
 
