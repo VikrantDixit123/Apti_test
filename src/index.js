@@ -1,24 +1,46 @@
+/***** React Dependencies *****/
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
-/***** Components *****/
-import App from './App';
-/***** Styles *****/
-/**
- * NOTE: Importing styles.css in index.js. 
- * so the css written in styles.css will be available in all components
-*/
-import './styles.css';
-
+/***** Other Dependencies *****/
 import { Provider } from 'react-redux';
 import configureStore from './config/configureStore';
+import * as serviceWorker from './serviceWorker';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+/***** Primary Error boundry of application *****/
+import ErrorHandler from './components/ErrorHandler';
+/***** Styles *****/
+import './styles/styles.css';
+
+/***** Components/Containers *****/
+import App from './App';
+import Login from './components/Login';
+import QuestionContainer from './components/QuestionContainer';
+import Logout from './components/Logout';
+
 const store = configureStore();
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <Router>
+            {/*
+              * Have added React.StrictMode.
+              read more about it: https://reactjs.org/docs/strict-mode.html#gatsby-focus-wrapper 
+             */}
+            <React.StrictMode>
+                <ErrorHandler>
+                    <App>
+                        <Switch>
+                            <Route exact path='/' component={Login} />
+                            <Route exact path='/questions' component={QuestionContainer} />
+                            <Route exact path='/logout' component={Logout} />
+                        </Switch>
+                    </App>
+                </ErrorHandler>
+            </React.StrictMode>
+        </Router>
     </Provider>,
-    document.getElementById('root'));
+    document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

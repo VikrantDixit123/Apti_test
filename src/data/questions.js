@@ -67,5 +67,51 @@ export const questionsData = [
 				"value": "LosAngeles"
 			}
 		]
+	},
+	{
+		"id": 4,
+		"type": "checkbox",
+		"questionText": "Which of the following is part of India ?",
+		"options": [
+			{
+				"key": "Maharashtra",
+				"value": "Maharashtra"
+			},
+			{
+				"key": "Dubai",
+				"value": "Dubai"
+			},
+			{
+				"key": "Delhi",
+				"value": "Delhi"
+			},
+			{
+				"key": "LosAngeles",
+				"value": "LosAngeles"
+			}
+		]
+	},
+	{
+		"id": 5,
+		"type": "checkbox",
+		"questionText": "Which of the following is part of India ?",
+		"options": [
+			{
+				"key": "Maharashtra",
+				"value": "Maharashtra"
+			},
+			{
+				"key": "Dubai",
+				"value": "Dubai"
+			},
+			{
+				"key": "Delhi",
+				"value": "Delhi"
+			},
+			{
+				"key": "LosAngeles",
+				"value": "LosAngeles"
+			}
+		]
 	}
 ];

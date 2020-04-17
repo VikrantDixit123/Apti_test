@@ -1,6 +1,7 @@
 // This variable defines initialState of redux store.
 const initialState = {
-    userAnswers: {}
+    userAnswers: {},
+    time: 1
 };
 
 export default initialState;
