@@ -10,10 +10,6 @@ import QuestionContainer from './QuestionContainer';
 import { questionsData } from './data/questions';
 
 class App extends React.Component {
-<<<<<<< HEAD
- 
-=======
->>>>>>> aa009d3332778e4bf7b1f70ebbc85984adb52f6d
   render() {
     return (
       // NOTE: When we need to use styling try to use className as best practice.

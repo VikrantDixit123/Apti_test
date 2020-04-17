@@ -18,15 +18,9 @@ class QuestionContainer extends React.Component {
   }
 
   render() {
-    /**
-     * NOTE: We are using destructing assignment.
-     * more-info: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment 
-     * it is equivalent to 
-     * const question = props.question;
-     * const questionNumber = props.questionNumber;
-    */
+  
     const { question, questionNumber } = this.props;
-    const selectedAnswer = this.props.userAnswers[question.id];
+    const selectedAnswer = this.props.userAnswers[question.id]; 
 
     return (
       <React.Fragment>

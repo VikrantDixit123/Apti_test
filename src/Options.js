@@ -1,5 +1,4 @@
-import React from 'react';
-/***** Components *****/
+import React from 'react';  
 import Radio from './Radio';
 import Checkbox from './Checkbox';
 
