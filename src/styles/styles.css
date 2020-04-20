@@ -1,12 +1,10 @@
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    min-width: 1300px;
+    width: 100%;
     background-color: #D5D9DF;
 }
 
@@ -159,36 +157,99 @@ h4{
 
 /*******Responsive Css*********/
 
-@media screen and (max-width:960px) {
+@media screen and (max-width:1024px) {
 
-    login-main{
-        width: 350px;
-        margin: auto;
+    h3{
+        font-size: 40px;
+    }
+
+    .login-main{
+        padding-top: 70px;
+        width: 500px;
+        margin: 0px auto;
         
     }
 
-    .logout{        
-        margin-left: 305px;
+    .login{
+        font-size: 20px;
+        width: 270px; 
+        padding: 70px;
+    }
+    
+    .login-btn, .login-input, .instructions{
+        font-size: 20px;
+        width: 270px;
+    }
+
+    .login-text{
+        font-size: 25px;
+    }
+
+    .instructions{
+        font-size: 20px;
     }
 }
 
 @media screen and (max-width:640px) {
-    
-    .login-main{
+
+    h3{
+        font-size: 35px;
+    }
+
+    .login-main{   
+        padding-top: 50px;     
         width: 350px;
-        margin: 0px 145px;
-    }
-
-    .logout{        
-        margin-left: 145px;
-    }
-
-}
-
-@media screen and (max-width:360px) {
-    
-    .login-main{
-        width: 250px;
         margin: 0px auto;
     }
+
+    .login{
+        font-size: 20px;
+        width: 250px; 
+        padding: 40px;
+    }
+
+    .login-text{
+        font-size: 15px;
+    }
+    
+    .login-btn, .login-input, .instructions{
+        font-size: 15px;
+        width: 250px;
+    }
+   
 }
+
+@media screen and (max-width:360px) {    
+
+    img{
+        height: 40px;
+        width: 120px;
+    }
+
+    .login-main{
+        padding-top: 30px;
+        width: 260px;
+        margin: 0px auto;
+    }
+
+    h3{
+        width: 200px;
+        font-size: 20px;
+    }    
+
+    .login{
+        font-size: 10px;
+        width: 200px; 
+        padding: 30px;
+    }
+
+    .login-text{
+        font-size: 15px;
+    }
+    
+    .login-btn, .login-input, .instructions{
+        font-size: 15px;
+        width: 200px;
+    }
+    
+}   
