@@ -10,7 +10,7 @@ class Login extends React.Component {
         return (
             <div className = "login-root">
                 <div className="login-main">
-                    <h3>Aptitude Test</h3>
+                    <h3 className = "aptitude-heading">Aptitude Test</h3>
                     <div className="login">
                         <p className="login-text">Enter your Email :</p>
                         <input className="login-input" type="text" placeholder="Email- ID"></input>
@@ -21,6 +21,9 @@ class Login extends React.Component {
                         <Link to="/questions">
                             <button className="login-btn">Start Test</button>
                         </Link>
+                        <Link to="/registration">
+                        <p className = "anchor-tag"><a href = "https://localhost:3000/#/">Not Registered Yet !! </a></p>  
+                        </Link>        
                     </div>
                     <div className="instructions">
                         <h4>Instructions: </h4>

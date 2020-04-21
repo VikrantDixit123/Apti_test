@@ -10,12 +10,14 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import ErrorHandler from './components/ErrorHandler';
 /***** Styles *****/
 import './styles/styles.css';
+import './styles/registration.css';
 
 /***** Components/Containers *****/
 import App from './App';
 import Login from './components/Login';
 import QuestionContainer from './components/QuestionContainer';
 import Logout from './components/Logout';
+import Registration from './components/Registration';
 
 const store = configureStore();
 
@@ -33,6 +35,7 @@ ReactDOM.render(
                             <Route exact path='/' component={Login} />
                             <Route exact path='/questions' component={QuestionContainer} />
                             <Route exact path='/logout' component={Logout} />
+                            <Route exact path='/registration' component={Registration} />
                         </Switch>
                     </App>
                 </ErrorHandler>
