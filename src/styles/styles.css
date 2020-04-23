@@ -39,7 +39,6 @@ img{
     display: block;
     padding-top: 10px;
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
     height: 5%;
@@ -50,25 +49,40 @@ img{
 
 /*********Login Page**********/
 
+.r1,.r2{
+    margin: 20px;
+    margin-top: 0px;
+}
+
+.student{
+    margin-right: 20px;
+}
+
 .aptitude-heading{   
     width: 300px;
-    margin: 0 auto;
+    margin: 0px auto;
+    padding-top: 20px;
+    margin-top: 0px;
     text-align: center;
     font-size: 30px;
 }
 
 .login-root{
     width: 100%;
+    height: 100%;
+    background-image: url("/background.jpg");
+    background: fixed;
     
 }
 
 .login-main{
-    width: 350px;
-    padding-top: 30px;
+    width: 350px;    
+    padding-top: 10px;
     margin: 0px auto;    
     
 }
 .login {
+    border-radius: 5px;
     background-color: #9CB0CB;
     padding: 50px;
     padding-bottom: 40px;
@@ -92,8 +106,8 @@ img{
     border: none;
 }
 
-.login-btn {
-    background-color: #4CAF50;
+.login-btn,.start-btn {
+    background-color: rgb(63, 175, 67);
     border: none;
     color: white;
     padding: 10px 25px;
@@ -105,10 +119,23 @@ img{
     width: 250px;
 }
 
+.start-btn{
+    width: 150px;
+}
+
+.start-btn-div{
+    width: 150px;
+    margin: 0px auto;
+}
+
+.login-btn:hover{
+    background-color: rgb(52, 144, 55);
+}
+
 .instructions {
-    margin: 50px auto;
-    width: 300px;
-    padding: 0px ;
+    margin: 0px auto;
+    width: 400px;
+    padding: 20px ;
     text-align: left;
 }
 
@@ -163,12 +190,13 @@ h4{
 
 @media screen and (max-width:1024px) {
 
-    h3{
+    .aptitude-heading{
+        padding-top: 50px;
         font-size: 40px;
     }
 
     .login-main{
-        padding-top: 70px;
+        padding-top: 10px;
         width: 500px;
         margin: 0px auto;
         
@@ -196,12 +224,13 @@ h4{
 
 @media screen and (max-width:640px) {
 
-    h3{
+    .aptitude-heading{
+        padding-top: 10px;
         font-size: 30px;
     }
 
     .login-main{   
-        padding-top: 50px;     
+        padding-top: 10px;     
         width: 300px;
         margin: 0px auto;
     }
@@ -231,12 +260,13 @@ h4{
     }
 
     .login-main{
-        padding-top: 30px;
+        padding-top: 10px;
         width: 260px;
         margin: 0px auto;
     }
 
-    h3{
+    .aptitude-heading{
+        padding-top: 10px;
         width: 200px;
         font-size: 20px;
     }    

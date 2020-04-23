@@ -18,6 +18,8 @@ import Login from './components/Login';
 import QuestionContainer from './components/QuestionContainer';
 import Logout from './components/Logout';
 import Registration from './components/Registration';
+import Starttest from './components/Starttest'
+import Adminportal from './components/Adminportal';
 
 const store = configureStore();
 
@@ -36,6 +38,8 @@ ReactDOM.render(
                             <Route exact path='/questions' component={QuestionContainer} />
                             <Route exact path='/logout' component={Logout} />
                             <Route exact path='/registration' component={Registration} />
+                            <Route exact path='/start' component={Starttest} />
+                            <Route exact path='/admin' component={Adminportal} />
                         </Switch>
                     </App>
                 </ErrorHandler>

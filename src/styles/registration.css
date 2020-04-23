@@ -57,13 +57,22 @@
         font-size: 16px;        
 }
 
+.submit-btn:hover{
+    background-color: rgb(52, 144, 55);
+}
+
+
 .anchor-tag{
     text-align: center;
     margin-top: 30px;
     color: blue;
     text-decoration: none;
+    
 }
 
+.anchor-tag:hover {
+    text-decoration: underline;
+}
 a{
     text-decoration: none;
 }

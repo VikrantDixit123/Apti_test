@@ -71,33 +71,33 @@ class Registration extends React.Component {
                         <label className="label">
                             Name:
                         </label>
-                        <input type="text" className="name-box" placeholder="First name" onChange={this.handleFirstName} />
-                        <input type="text" className="name-box" placeholder="Last name" onChange={this.handleLastName} />
+                        <input type="text" className="name-box" placeholder="First name" onChange={this.handleFirstName} required/>
+                        <input type="text" className="name-box" placeholder="Last name" onChange={this.handleLastName} required/>
                         <br />
                         <label className="label">
                             PhoneNo:
                         </label>
-                        <input type="tel" pattern="[0-9]{10}" className="input-box" placeholder="Phone number" onChange={this.handlePhoneNo} />
+                        <input type="tel" pattern="[0-9]{10}" className="input-box" placeholder="Phone number" onChange={this.handlePhoneNo} required/>
                         <br />
                         <label className="label">
                             Email.ID:
                         </label>
-                        <input type="email" className="input-box" placeholder="example@gmail.com" onChange={this.handleEmail} />
+                        <input type="email" className="input-box" placeholder="example@gmail.com" onChange={this.handleEmail} required/>
                         <br />
                         <label className="label">
                             D-O-B:
                         </label>
-                        <input type="date" className="input-box" placeholder="Date of birth" onChange={this.handleDateOfBirth} />
+                        <input type="date" className="input-box" placeholder="Date of birth" onChange={this.handleDateOfBirth} required/>
                         <br />
                         <label className="label">
                             College Name:
                         </label>
-                        <input type="text" className="input-box" placeholder="College Name" onChange={this.handleCollegeName} />
+                        <input type="text" className="input-box" placeholder="College Name" onChange={this.handleCollegeName} required/>
                         <br />
                         <label className="label">
                             Pass:
                         </label>
-                        <input type="number" className="input-box" placeholder="Year of Passing" onChange={this.handleYearOfPassing} />
+                        <input type="number" className="input-box" placeholder="Year of Passing" onChange={this.handleYearOfPassing} required/>
                         <br />
                         <input type="submit" className="submit-btn" value="Submit" /> 
                         <Link to="/">

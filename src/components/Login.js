@@ -1,48 +1,59 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-
-/*
-*   Validation not added yet
-*/
+let url = null;
 
 class Login extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            usertype: ''
+        }
+    }
+
+    handleUserType = (event) => {
+        
+        this.setState({
+            usertype: event.target.value
+        })
+
+    }
+
     render() {
+        if(this.state.usertype === "Student"){
+            url = "./start"
+            console.log("1")
+        }
+        
+        if(this.state.usertype === "Admin"){
+            url = "./admin"
+        }
+
         return (
-            <div className = "login-root">
+            <div className="login-root">
+                <h3 className="aptitude-heading">Aptitude Test</h3>
                 <div className="login-main">
-                    <h3 className = "aptitude-heading">Aptitude Test</h3>
                     <div className="login">
+
+                        <input type="radio" className="r1" name="radio" value="Student" onClick={this.handleUserType} />
+                        <label className = "student">Student</label>
+                        <input type="radio" className="r2" name="radio" value="Admin" onClick={this.handleUserType} />
+                        <label className = "admin">Admin</label>
+
                         <p className="login-text">Enter your Email :</p>
                         <input className="login-input" type="text" placeholder="Email- ID"></input>
                         <br /><br /><br />
                         <p className="login-text">Enter password :</p>
                         <input className="login-input" type="password" placeholder="Password"></input>
                         <br /><br />
-                        <Link to="/questions">
-                            <button className="login-btn">Start Test</button>
+                        <Link to={url}>
+                            <button className="login-btn">Login</button>
                         </Link>
                         <Link to="/registration">
-                        <p className = "anchor-tag"><a href = "https://localhost:3000/#/">Not Registered Yet !! </a></p>  
-                        </Link>        
+                            <p className="anchor-tag">Not Registered Yet !! </p>
+                        </Link>
                     </div>
-                    <div className="instructions">
-                        <h4>Instructions: </h4>
-                        <br></br>
-                        <ul>
-                            <li>
-                                First Instruction
-                        </li>
-                            <li>
-                                Second Instruction
-                        </li>
-                            <li>
-                                Third Instruction
-                        </li>
-                            <li>
-                                Fourth Instruction
-                        </li>
-                        </ul>
-                    </div>
+
                 </div>
             </div>
         )
