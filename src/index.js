@@ -11,6 +11,7 @@ import ErrorHandler from './components/ErrorHandler';
 /***** Styles *****/
 import './styles/styles.css';
 import './styles/registration.css';
+import './styles/adminPortal.css';
 
 /***** Components/Containers *****/
 import App from './App';

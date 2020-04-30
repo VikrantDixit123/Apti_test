@@ -7,7 +7,9 @@ class Login extends React.Component {
         super(props)
 
         this.state = {
-            usertype: ''
+            usertype: '',
+            email: '',
+            password: ''
         }
     }
 
@@ -19,10 +21,21 @@ class Login extends React.Component {
 
     }
 
+    handleEmail = (event) => {
+        this.setState({
+            email: event.target.value,
+        });
+    }
+
+    handlePassword = (event) => {
+        this.setState({
+            password: event.target.value,
+        });
+    }
+
     render() {
         if(this.state.usertype === "Student"){
-            url = "./start"
-            console.log("1")
+            url = "./start"            
         }
         
         if(this.state.usertype === "Admin"){
@@ -41,10 +54,10 @@ class Login extends React.Component {
                         <label className = "admin">Admin</label>
 
                         <p className="login-text">Enter your Email :</p>
-                        <input className="login-input" type="text" placeholder="Email- ID"></input>
+                        <input className="login-input" type="text" placeholder="Email- ID" onChange={this.handleEmail}></input>
                         <br /><br /><br />
                         <p className="login-text">Enter password :</p>
-                        <input className="login-input" type="password" placeholder="Password"></input>
+                        <input className="login-input" type="password" placeholder="Password" onChange={this.handlePassword}></input>
                         <br /><br />
                         <Link to={url}>
                             <button className="login-btn">Login</button>

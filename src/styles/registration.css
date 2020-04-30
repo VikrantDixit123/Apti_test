@@ -43,6 +43,17 @@
     width: 330px;
 }
 
+.dob{
+    width: 87px;
+    margin: 15px;
+    padding: 7px 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #E6E7E7;
+}
+
 .submit-btn{    
         background-color: #4CAF50;
         width: 200px;
