@@ -32,7 +32,7 @@ class QuestionContainer extends React.Component {
 
     if (this.state.logoutstate === true) {
       return (
-        <Redirect to="/logout" />
+        <Redirect to="/" />
       )
     }
 

@@ -1,10 +1,11 @@
-body {
+html, body {
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     width: 100%;
+    height: 100%;
     background-color: #D5D9DF;
 }
 
@@ -13,35 +14,40 @@ body {
     padding: 0;
 }
 
+#root{
+    min-height: 100%;     
+    background-image: url("/public/background.jpg");  
+}
+
 
 
 /********* header-footer ********/
 
 
-img{
-    
-    height: 50px;
-    width: 150px;
+img{    
+    height: 40px;
+    width: 120px;
 }
 
 .header {
     width: 100%;
     color: white;
     font-size: 30px;
-    padding-top: 10px;
+    padding-top: 5px;
     justify-content: space-around;
     align-items: center;
-    min-height: 7vh;
+    min-height: 6vh;
     background-color: rgb(76, 75, 82);
 }
 
-.footer {
-    display: block;
+#footer {
+    margin-top: 50px;
     padding-top: 10px;
-    position: fixed;
-    bottom: 0;
+    padding-bottom: 10px;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
     width: 100%;
-    height: 5%;
     background-color: rgb(76, 75, 82);
     color: white;
     text-align: center;
@@ -69,9 +75,7 @@ img{
 
 .login-root{
     width: 100%;
-    height: 100%;
-    background-image: url("/background.jpg");
-    background: fixed;
+    height: 100%;    
     
 }
 

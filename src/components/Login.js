@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-let url = null;
+let url = "/";
 
 class Login extends React.Component {
     constructor(props) {
@@ -44,7 +44,7 @@ class Login extends React.Component {
 
         return (
             <div className="login-root">
-                <h3 className="aptitude-heading">Aptitude Test</h3>
+                <h3 className="aptitude-heading">Login</h3>
                 <div className="login-main">
                     <div className="login">
 

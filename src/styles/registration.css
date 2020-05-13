@@ -1,10 +1,12 @@
+.registration{
+    height: 100%;    
+}
 
 .registration-main{
     display: block;
     width: 450px;
     padding: 30px;
-    margin: 0 auto;
-    margin-bottom: 100px;
+    margin: 0 auto;    
     background-color: white;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -29,8 +31,8 @@
 }
 
 .name-box, .input-box{
-    width: 150px;
-    margin: 15px;
+    width: 155px;
+    margin: 10px;
     padding: 7px 10px;
     box-sizing: border-box;
     border: none;
@@ -56,16 +58,17 @@
 
 .submit-btn{    
         background-color: #4CAF50;
-        width: 200px;
-        margin: 0px 125px;
+        width: 150px;
+        margin: 0px 150px;
         border: none;
         color: white;
-        padding: 10px 25px;
+        padding: 10px 20px;
         margin-top: 40px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;        
+        font-size: 16px; 
+        border-radius: 7px;       
 }
 
 .submit-btn:hover{

@@ -17,10 +17,9 @@ import './styles/adminPortal.css';
 import App from './App';
 import Login from './components/Login';
 import QuestionContainer from './components/QuestionContainer';
-import Logout from './components/Logout';
 import Registration from './components/Registration';
 import Starttest from './components/Starttest'
-import Adminportal from './components/Adminportal';
+import Adminportal from './components/Admin/Adminportal';
 
 const store = configureStore();
 
@@ -36,8 +35,7 @@ ReactDOM.render(
                     <App>
                         <Switch>
                             <Route exact path='/' component={Login} />
-                            <Route exact path='/questions' component={QuestionContainer} />
-                            <Route exact path='/logout' component={Logout} />
+                            <Route exact path='/questions' component={QuestionContainer} />                            
                             <Route exact path='/registration' component={Registration} />
                             <Route exact path='/start' component={Starttest} />
                             <Route exact path='/admin' component={Adminportal} />

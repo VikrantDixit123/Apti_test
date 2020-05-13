@@ -54,7 +54,7 @@ class Timer extends React.Component {
     render() {
         if(this.state.finishStatus === true){
             return(
-                <Redirect to = "/logout" />
+                <Redirect to = "/" />
             )
         }
             return (

@@ -1,12 +1,126 @@
-.add-btn{
+.admin-heading {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.admin-left-content {
+    float: left;
+    margin: 10px;
+    width: 200px;
+    background-color: white;
+}
+
+button:focus {
+    outline: none;
+    color: green;
+}
+
+.content-list {
+    border: none;
+    background: none;
+    padding: 10px 10px;
+    margin-left: 20px;
+    text-align: center;
+    color: #595959;
+}
+
+.vl{
+    border-left: 2px solid green;
+    height: 700px;
+    float: left;
+}
+
+hr {
+    color: #000;
+}
+
+.admin-questions-list{
+    width: 400px;
+    float: left;
+    margin-left: 350px;
+    margin-top: 40px;
+}
+
+.admin-right-content {
+    background-color: #859EBE;
+    float: left;
+    margin-left: 300px;
+    margin-top: 40px;
+}
+
+.add-btn {
     background-color: #4CAF50;
-        width: 200px;        
+    width: 150px;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    margin-top: 40px;
+    margin-left: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.create-test-form{
+    width: 390px;
+    height: 120px;
+    padding: 10px;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+.create-test-label{
+    display: inline-block;
+    width: 300px;
+    font-size: 15px;
+}
+
+.create-test-input{
+    width: 50px;
+    margin: 5px;
+    padding: 7px 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #E6E7E7;
+}
+
+.create-test-radio{    
+    margin: 7px;
+}
+
+.create-test-btn{
+    background-color: #4CAF50;
+        width: 150px;
+        margin: 0px 110px;
         border: none;
         color: white;
-        padding: 10px 25px;
+        padding: 5px 25px;
         margin-top: 40px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;        
+        font-size: 14px;   
+        border-radius: 3px;  
+}
+
+.admin-add-data{
+    padding: 30px;
+}
+
+.admin-input-box{
+    width: 300px;
+    margin: 10px 20px;
+    padding: 7px 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #E6E7E7;
+}
+
+.admin-remove-data{
+    padding: 20px;
 }

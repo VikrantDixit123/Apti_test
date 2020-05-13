@@ -64,7 +64,7 @@ class Registration extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className = "registration">
                 <h3 className="registration-heading">Registration</h3>
                 <div className="registration-main">
                     <form onSubmit={this.handleSubmit}>
@@ -116,11 +116,3 @@ class Registration extends React.Component {
 
 
 export default Registration;
-
-/*
-<label className="label">
-                            D-O-B:
-                        </label>
-                        <input type="date" className="input-box" placeholder="Date of birth" onChange={this.handleDateOfBirth} required/>
-                        <br />
-*/
