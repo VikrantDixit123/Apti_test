@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Question from '../Question';
-import { questionsData } from 'D:/Vikrant/aptitude-test/src/data/questions';
+import { questionsData } from 'E:/VSCode Workspace/aptitude-test/src/data/questions';
 
 let data = {
     obj: {
@@ -25,20 +25,22 @@ export default class RemoveData extends Component {
 
     render() {
         return (
-            <div className="admin-right-content">
+            <div className="create-test-questions">
+                <h3>Select the questions to remove.....</h3>
                 <div className="admin-remove-data">
                     {
                         questionsData.map((question, index) => {
                             return (
-                                <div key={index} >
+                                <div className = "map-questions" key={index} >
                                     <input type="checkbox" Style='float:left' value={question.id} onChange={this.handleRemove}></input>
                                     <Question questionText={question.questionText} questionNumber={index + 1} questionId={+new Date()} />
+                                    <hr></hr>
                                 </div>
                             )
                         })
                     }
                 </div>
-                <button className="create-test-btn" onClick={this.handleSubmit}>Remove</button>
+                <button className="remove-data-btn" onClick={this.handleSubmit}>Remove</button>
             </div>
         )
     }
