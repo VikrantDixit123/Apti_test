@@ -10,16 +10,17 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import ErrorHandler from './components/ErrorHandler';
 /***** Styles *****/
 import './styles/styles.css';
-import './styles/registration.css';
 import './styles/adminPortal.css';
+
 
 /***** Components/Containers *****/
 import App from './App';
 import Login from './components/Login';
 import QuestionContainer from './components/QuestionContainer';
 import Registration from './components/Registration';
-import Starttest from './components/Starttest'
 import Adminportal from './components/Admin/Adminportal';
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import Instructions from './components/Instructions';
 
 const store = configureStore();
 
@@ -37,7 +38,7 @@ ReactDOM.render(
                             <Route exact path='/' component={Login} />
                             <Route exact path='/questions' component={QuestionContainer} />                            
                             <Route exact path='/registration' component={Registration} />
-                            <Route exact path='/start' component={Starttest} />
+                            <Route exact path='/start' component={Instructions} />
                             <Route exact path='/admin' component={Adminportal} />
                         </Switch>
                     </App>

@@ -16,45 +16,42 @@ export default class CreateTest extends React.Component {
         data.obj.Id = (+new Date());
         console.log(data.obj.questions);
         console.log(data.obj.Id);
-        
+
     }
 
-    handleChange = (event) => {   
+    handleChange = (event) => {
         if (data.obj.questions.includes(event.target.value)) {
             data.obj.questions = data.obj.questions.filter(d => d !== event.target.value);
-          } else {
+        } else {
             data.obj.questions.push(event.target.value);
-          }                     
-        console.log(data.obj.questions);     
+        }
+        console.log(data.obj.questions);
     }
 
 
     render() {
         return (
-            <div>
-
-                <div className="create-test-questions">
-                    <h3>Select the questions for the test....</h3>
-                    <br></br>
+            <div className="create-test-container">
+                <h3 className = "text-muted create-test-heading">Select the questions for the test....</h3>                
+                <div className="create-test-questions overflow-auto">
                     {
                         questionsData.map((question, index) => {
                             return (
-                                <div className = "map-questions" key={index} >
-                                    <input type="checkbox" Style='float:left' value = {question.id} onChange = {this.handleChange}></input>
-                                    <Question questionText={question.questionText} questionNumber={index + 1} questionId={+new Date()} />
-                                    <hr></hr>
-                                </div>                                
+                                <div className="map-questions input-group-text bg-white rounded-0" key={index} >
+                                    <input type="checkbox" value={question.id} onChange={this.handleChange}></input>
+                                    <Question questionText={question.questionText} questionNumber={index + 1} questionId={+new Date()} />                                    
+                                </div>
                             )
                         })
                     }
                 </div>
 
-                <div className="admin-right-content">
-                    <div className="create-test-form">
-                        <label className="create-test-label">Enter the time limit for the test(in mins):</label>
-                        <input className="create-test-input" type="number" />
+                <div className="">
+                    <div className="">
+                        <label className="">Enter the name of the test:</label>
+                        <input className="" type="text" />
                         <br />
-                        <button className="create-test-btn" onClick={this.handleSubmit}>Create Test</button>
+                        <button className="btn btn-success" onClick={this.handleSubmit}>Create Test</button>
                     </div>
                 </div>
 

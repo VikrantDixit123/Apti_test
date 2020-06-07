@@ -1,19 +1,33 @@
 import React from 'react'
+import { Redirect } from "react-router-dom";
 
 export default class LeftContent extends React.Component {
+    
     render() {
         return (
-            <div>                            
-                <div className="admin-left-content">                    
-                    <button className="content-list" value="createTest" onClick={this.props.onClick}>Create test</button>
-                    <hr />
-                    <button className="content-list" value="addData" onClick={this.props.onClick}>Add Data</button>
-                    <hr />
-                    <button className="content-list" value="removeData" onClick={this.props.onClick}>Remove Data</button>
-                    <hr />                                        
-                </div>  
-                <div className = "vl"></div>
+            <div className="wrapper">
+                <nav className="sidebar">
+                    <ul class="list-unstyled components">
+                        <li class="active">
+                            <button value="home" onClick={this.props.onClick}>Home</button>
+                        </li>
+
+                        <li>
+                            <button value="createTest" onClick={this.props.onClick}>Create Test</button>
+                        </li>
+                        <li>
+                            <button value="addData" onClick={this.props.onClick}>Add Question</button>
+                        </li>
+                        <li>
+                            <button value="removeData" onClick={this.props.onClick}>Remove Questions</button>
+                        </li>
+                        <li>
+                            <button value="logout" onClick={<Redirect to = "/" />}>Logout</button>
+                        </li>
+                    </ul>
+                </nav>
             </div>
+
         )
     }
 }

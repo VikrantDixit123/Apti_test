@@ -7,18 +7,24 @@ class Login extends React.Component {
         super(props)
 
         this.state = {
-            usertype: '',
+            usertype: 'false',
             email: '',
             password: ''
         }
     }
 
-    handleUserType = (event) => {
-        
-        this.setState({
-            usertype: event.target.value
-        })
+    handleUserType = () => {
 
+        if (this.state.usertype === "false") {
+            this.setState({
+                usertype: "true"
+            })
+        }
+        if (this.state.usertype === "true") {
+            this.setState({
+                usertype: "false"
+            })
+        }
     }
 
     handleEmail = (event) => {
@@ -34,39 +40,40 @@ class Login extends React.Component {
     }
 
     render() {
-        if(this.state.usertype === "Student"){
-            url = "./start"            
+        if (this.state.usertype === "false") {
+            url = "./start"
         }
-        
-        if(this.state.usertype === "Admin"){
+
+        if (this.state.usertype === "true") {
             url = "./admin"
         }
 
         return (
-            <div className="login-root">
-                <h3 className="aptitude-heading">Login</h3>
-                <div className="login-main">
-                    <div className="login">
-
-                        <input type="radio" className="r1" name="radio" value="Student" onClick={this.handleUserType} />
-                        <label className = "student">Student</label>
-                        <input type="radio" className="r2" name="radio" value="Admin" onClick={this.handleUserType} />
-                        <label className = "admin">Admin</label>
-
-                        <p className="login-text">Enter your Email :</p>
-                        <input className="login-input" type="text" placeholder="Email- ID" onChange={this.handleEmail}></input>
-                        <br /><br /><br />
-                        <p className="login-text">Enter password :</p>
-                        <input className="login-input" type="password" placeholder="Password" onChange={this.handlePassword}></input>
-                        <br /><br />
-                        <Link to={url}>
-                            <button className="login-btn">Login</button>
-                        </Link>
-                        <Link to="/registration">
-                            <p className="anchor-tag">Not Registered Yet !! </p>
-                        </Link>
+            <div className="container-fluid login-container">
+                <div className="row justify-content-center">
+                    <div className="col-12 col-sm-6 col-md-3">
+                        <form className="form-container">
+                            <div className="form-group">
+                                <label htmlFor="InputEmail">Email address</label>
+                                <input type="email" className="form-control" id="InputEmail" aria-describedby="emailHelp" onChange={this.handleEmail} />
+                                <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone.</small>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="Password">Password</label>
+                                <input type="password" className="form-control" id="Password" onChange={this.handlePassword}/>
+                            </div>
+                            <div className="form-group form-check">
+                                <input type="checkbox" className="form-check-input" id="Check"  onChange={this.handleUserType}/>
+                                <label className="form-check-label" htmlFor="Check">Admin Login</label>
+                            </div>
+                            <Link to={url}>
+                                <button type="submit" className="btn btn-primary btn-block">Login</button>
+                            </Link>
+                            <Link to = "/registration" >
+                                <a className="row justify-content-center" href="#"><span className="register-link" >Not registered Yet !</span></a>
+                            </Link>
+                        </form>
                     </div>
-
                 </div>
             </div>
         )
