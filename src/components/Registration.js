@@ -1,36 +1,34 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'   
 
 class Registration extends React.Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            firstname: '',
-            lastname: '',
+            name: '',            
             phone_no: '',
+            address: '',
             email_id: '',
-            dob: '',
-            college: '',
-            passing: ''
+            dob: '', 
+            password: ''           
         };
     }
 
-    handleFirstName = (event) => {
+    handleName = (event) => {
         this.setState({
-            firstname: event.target.value,
+            name: event.target.value,
         });
-    }
-
-    handleLastName = (event) => {
-        this.setState({
-            lastname: event.target.value,
-        });
-    }
+    }    
 
     handlePhoneNo = (event) => {
         this.setState({
             phone_no: event.target.value,
+        });
+    }
+
+    handleAddress = (event) => {
+        this.setState({
+            address: event.target.value,
         });
     }
 
@@ -46,68 +44,62 @@ class Registration extends React.Component {
         });
     }
 
-    handleCollegeName = (event) => {
+    handlePassword = (event) => {
         this.setState({
-            college: event.target.value,
-        });
-    }
-
-    handleYearOfPassing = (event) => {
-        this.setState({
-            passing: event.target.value,
+            dob: event.target.value,
         });
     }
 
     handleSubmit = (event) => {
-        console.log("Details submitted successfully");
+        alert("Details submitted successfully");
     }
 
     render() {
         return (
-            <div className = "registration">
-                <h3 className="registration-heading">Registration</h3>
-                <div className="registration-main">
-                    <form onSubmit={this.handleSubmit}>
-                        <label className="label">
-                            Name:
-                        </label>
-                        <input type="text" className="name-box" placeholder="First name" onChange={this.handleFirstName} required />
-                        <input type="text" className="name-box" placeholder="Last name" onChange={this.handleLastName} required />
-                        <br />
-                        <label className="label">
-                            PhoneNo:
-                        </label>
-                        <input type="tel" pattern="[0-9]{10}" className="input-box" placeholder="Phone number" onChange={this.handlePhoneNo} required />
-                        <br />
-                        <label className="label">
-                            Email.ID:
-                        </label>
-                        <input type="email" className="input-box" placeholder="example@gmail.com" onChange={this.handleEmail} required />
-                        <br />
-                        <label className="label">
-                            D-O-B:
-                        </label>                        
-                        <input type="text" className="dob" pattern="[0-9]*" maxLength="2" size="2" placeholder="DD" required/>
-                        /                        
-                        <input type="text" className="dob" pattern="[0-9]*" maxLength="2" size="2" placeholder="MM" required/>
-                        /                        
-                        <input type="text" className="dob" pattern="[0-9]*" maxLength="4" size="4" placeholder="YYYY" required  />
-                        <br />
-                        <label className="label">                            
-                            College:
-                        </label>
-                        <input type="text" className="input-box" placeholder="College Name" onChange={this.handleCollegeName} required />
-                        <br />
-                        <label className="label">
-                            Pass:
-                        </label>
-                        <input type="number" className="input-box" placeholder="Year of Passing" onChange={this.handleYearOfPassing} required />
-                        <br />
-                        <input type="submit" className="submit-btn" value="Submit" />
-                        <Link to="/">
-                            <p className="anchor-tag"><a href="https://localhost:3000/#/">Already Registered !! </a></p>
-                        </Link>
-                    </form>
+            <div className=" container-fluid reg-container">
+                <div className="row justify-content-center">
+                    <div className="col-4 mr-5 text-center">
+                        <h1 className = "welcome-text">Welcome to Xoriant Solutions</h1>
+                        <h3> Enter the details for registration</h3>
+                    </div>
+                    <div className="col-8 col-sm-5 col-md-4 ml-5">
+                        <form className="form-container">
+                            
+                            <div className="form-group">
+                                <label htmlFor="InputName ">Full name</label>
+                                <input type="name" className="form-control form-control-sm" id="InputName" onChange = {this.handleName}/>
+                            </div>
+                            
+                            <div className="form-group">
+                                <label htmlFor="InputEmail">Email ID</label>
+                                <input type="email" className="form-control form-control-sm" id="InputEmail" onChange = {this.handleEmail}/>
+                            </div>
+                            
+                            <div className="form-group">
+                                <label htmlFor="InputAddress">Address</label>
+                                <input type="address" className="form-control form-control-sm" id="InputAddress" onChange = {this.handleAddress}/>
+                            </div>
+                            
+                            <div className="form-group">
+                                <label htmlFor="InputPhone">Phone number</label>
+                                <input type="phone" className="form-control form-control-sm" id="InputPhone" onChange = {this.handlePhoneNo}/>
+                            </div>
+                            
+                            <div className="form-group">
+                                <label htmlFor="InputDate">D-o-B</label>
+                                <input type="date" className="form-control form-control-sm" id="InputDate" onChange = {this.handleDateOfBirth}/>
+                            </div>
+                            
+                            <div className="form-group">
+                                <label htmlFor="InputPassword">Password</label>
+                                <input type="password" className="form-control form-control-sm" id="InputPassword" onChange = {this.handlePassword}/>
+                            </div>
+                            
+                            <button type="submit" className="btn btn-primary btn-block btn-sm" onClick = {this.handleSubmit}>Register</button>
+                            
+                            <a className="row justify-content-center" href="#"><span className="register-link" >Already registered !</span></a>
+                        </form>
+                    </div>
                 </div>
             </div>
         )

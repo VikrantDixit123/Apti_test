@@ -1,149 +1,141 @@
-.admin-heading {
-    text-align: center;
-    margin-top: 10px;
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-.admin-left-content {
-    float: left;
-    margin: 10px;
-    width: 200px;
-    background-color: white;
+.admin-container {
+    background-size: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url('/admin-background.png');
 }
 
-button:focus {
-    outline: none;
-    color: green;
-}
+/******** Left-Sidebar ********/
 
-.content-list {
+button, button:visited {
     border: none;
-    background: none;
-    padding: 10px 10px;
-    margin-left: 20px;
-    text-align: center;
-    color: #595959;
 }
 
-.vl{
-    border-left: 2px solid green;
-    height: 700px;
-    float: left;
-}
-
-hr {
-    color: #000;
-}
-
-.admin-questions-list{
-    width: 400px;
-    float: left;
-    margin-left: 350px;
-    margin-top: 40px;
-}
-
-.admin-right-content {
-    background-color: #859EBE;
-    float: left;
-    margin-left: 300px;
-    margin-top: 40px;
-}
-
-.create-test-questions{
-    width: 600px;
-    float: left;
-    margin-left: 220px;
-    margin-top: 40px;
-}
-
-.map-questions{    
-    padding: 7px;
-    background-color: #EBEDEF;
-}
-
-.add-btn {
-    background-color: #4CAF50;
-    width: 150px;
-    border: none;
-    color: white;
-    padding: 7px 25px;
-    margin-top: 40px;
-    margin-left: 100px;
-    text-align: center;
+button, button:hover, button:focus {
+    color: inherit;
     text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
+    transition: all 0.3s;
+    color: #00008B;
 }
 
-.create-test-form{
-    width: 390px;
-    height: 100px;
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+.sidebar {
+    min-width: 200px;
+    max-width: 200px;
+    position: relative;
+    height: 700px;
+    background: #7986CB;
+    transition: all 0.3s;
+}
+
+.sidebar ul li button {
     padding: 10px;
-    padding-left: 30px;
-    margin-top: 10px;
-}
-
-.create-test-label{
-    display: inline-block;
-    width: 300px;
-    font-size: 15px;
-}
-
-.create-test-input{
-    width: 50px;
-    margin: 5px;
-    padding: 7px 10px;
-    box-sizing: border-box;
+    padding-left: 15px;
+    font-size: 18px;
+    display: block;
     border: none;
-    border-radius: 5px;
-    display: inline-block;
-    background-color: #E6E7E7;
+    text-decoration: none;
+    width: 200px;
+    background: #7986CB;
+    text-align: left;
 }
 
-.create-test-radio{    
-    margin: 7px;
+.sidebar ul li button:hover {
+    color: black;
+    background: #FFA07A;
+    font-size: 19px;
 }
 
-.create-test-btn, .remove-data-btn{
-    background-color: #4CAF50;
-        width: 150px;
-        margin: 0px 110px;
-        margin-bottom: 10px;;
-        border: none;
-        color: white;
-        padding: 7px 25px;
-        margin-top: 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 14px;   
-        border-radius: 3px;  
+/******** Right Content ********/
+
+/******** Home ********/
+
+.avatar {
+    padding: 15px;
+    width: 150px;
 }
 
-.remove-data-btn{
-    margin-left: 200px;
-    margin-top: 40px;
+.home-container {
+    margin: 30px;
+    padding-left: 20px;
 }
 
-.create-test-btn:hover, .remove-data-btn:hover, .add-btn:hover{
-    background-color: rgb(52, 144, 55);
+.home-main-content {
+    width: 850px;
+    height: 150px;
+    background-color: #C8E6C9;
+    box-shadow: 0px 0px 10px 0px #000;
 }
 
-.admin-add-data{
-    padding: 30px;
+.bottom-nav {
+    margin-top: 100px;
+    height: 50px;
 }
 
-.admin-input-box{
-    width: 300px;
-    margin: 10px 20px;
-    padding: 7px 10px;
-    box-sizing: border-box;
-    border: none;
-    border-radius: 5px;
-    display: inline-block;
-    background-color: #E6E7E7;
+.nav-btn {
+    position: relative;
 }
 
-.admin-remove-data{
-    width: 600px;
-    padding-top: 20px;
+.nav-btn .hint-text {
+    visibility: hidden;
+    width: 120px;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    margin-bottom: 2px;
+    width: 120px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    /* Position the hint */
+    position: absolute;
+    z-index: 1;
+}
+
+.nav-btn:hover .hint-text {
+    visibility: visible;
+}
+
+/******** Create-Test, Remove-data ********/
+
+.create-test-container, .remove-data-container {
+    height: 100%;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.create-test-heading, .remove-data-heading {
+    margin-top: 20px;
+}
+
+.create-test-questions {
+    width: 900px;
+    height: 110px;
+    margin-bottom: 50px;
+    background-color: white;
+    box-shadow: 0px 0px 2px 0px black;
+}
+
+/******* Add-Questiosn *******/
+
+.add-data-form{
+    height: 100%;
+    width: 800px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;    
+}
+
+.add-btn{
+    width: 80px;
+    margin-top: 20px;
 }
