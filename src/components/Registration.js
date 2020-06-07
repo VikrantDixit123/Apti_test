@@ -87,11 +87,11 @@ class Registration extends React.Component {
                         <label className="label">
                             D-O-B:
                         </label>                        
-                        <input type="text" className="dob" pattern="[0-9]*" maxlength="2" size="2" placeholder="DD" required/>
+                        <input type="text" className="dob" pattern="[0-9]*" maxLength="2" size="2" placeholder="DD" required/>
                         /                        
-                        <input type="text" className="dob" pattern="[0-9]*" maxlength="2" size="2" placeholder="MM" required/>
+                        <input type="text" className="dob" pattern="[0-9]*" maxLength="2" size="2" placeholder="MM" required/>
                         /                        
-                        <input type="text" className="dob" pattern="[0-9]*" maxlength="4" size="4" placeholder="YYYY" required  />
+                        <input type="text" className="dob" pattern="[0-9]*" maxLength="4" size="4" placeholder="YYYY" required  />
                         <br />
                         <label className="label">                            
                             College:

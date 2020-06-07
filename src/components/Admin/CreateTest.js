@@ -1,6 +1,6 @@
 import React from 'react';
 import Question from '../Question';
-import { questionsData } from 'E:/VSCode Workspace/aptitude-test/src/data/questions';
+import { questionsData } from 'D:/Vikrant/aptitude-test/src/data/questions';
 
 let data = {
     obj: {
@@ -40,7 +40,7 @@ export default class CreateTest extends React.Component {
                         questionsData.map((question, index) => {
                             return (
                                 <div className = "map-questions" key={index} >
-                                    <input type="checkbox" Style='float:left' value = {question.id} onChange = {this.handleChange}></input>
+                                    <input type="checkbox" style={{float:'left'}} value = {question.id} onChange = {this.handleChange}></input>
                                     <Question questionText={question.questionText} questionNumber={index + 1} questionId={+new Date()} />
                                     <hr></hr>
                                 </div>                                

@@ -44,7 +44,7 @@ img{
     margin-top: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
-    position: relative;
+    position: fixed;
     bottom: 0px;
     left: 0px;
     width: 100%;
