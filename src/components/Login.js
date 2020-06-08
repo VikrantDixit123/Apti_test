@@ -52,7 +52,7 @@ class Login extends React.Component {
             <div className="container-fluid login-container">
                 <div className="row justify-content-center">
                     <div className="col-12 col-sm-6 col-md-3">
-                        <form className="form-container">
+                        <form className="login-form-container">
                             <div className="form-group">
                                 <label htmlFor="InputEmail">Email address</label>
                                 <input type="email" className="form-control" id="InputEmail" aria-describedby="emailHelp" onChange={this.handleEmail} />

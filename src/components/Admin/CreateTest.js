@@ -32,13 +32,13 @@ export default class CreateTest extends React.Component {
     render() {
         return (
             <div className="create-test-container">
-                <h3 className = "text-muted create-test-heading">Select the questions for the test....</h3>                
-                <div className="create-test-questions overflow-auto">
+                <h3 className = "text-light create-test-heading">Select the questions for the test....</h3>                
+                <div className="create-test-questions col-8 overflow-auto">
                     {
                         questionsData.map((question, index) => {
                             return (
-                                <div className="map-questions input-group-text bg-white rounded-0" key={index} >
-                                    <input type="checkbox" value={question.id} onChange={this.handleChange}></input>
+                                <div className="map-questions input-group-text bg-white rounded-0 border-top-0 border-right-0 border-left-0" key={index} >
+                                    <input type="checkbox" className = "question-checkbox" value={question.id} onChange={this.handleChange}></input>
                                     <Question questionText={question.questionText} questionNumber={index + 1} questionId={+new Date()} />                                    
                                 </div>
                             )
@@ -48,7 +48,7 @@ export default class CreateTest extends React.Component {
 
                 <div className="">
                     <div className="">
-                        <label className="">Enter the name of the test:</label>
+                        <label className="text-light">Enter the name of the test: </label>
                         <input className="" type="text" />
                         <br />
                         <button className="btn btn-success" onClick={this.handleSubmit}>Create Test</button>

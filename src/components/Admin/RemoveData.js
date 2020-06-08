@@ -26,13 +26,13 @@ export default class RemoveData extends Component {
     render() {
         return (
             <div className = "remove-data-container">
-                <h3 className = "text-muted remove-data-heading">Select the questions to remove.....</h3>
-                <div className="create-test-questions overflow-auto">
+                <h3 className = "text-light remove-data-heading">Select the questions to remove.....</h3>
+                <div className="create-test-questions col-8 overflow-auto">
                     {
                         questionsData.map((question, index) => {
                             return (
-                                <div className = "map-questions input-group-text bg-light rounded-0" key={index} >
-                                    <input type="checkbox" value={question.id} onChange={this.handleRemove}></input>
+                                <div className = "map-questions input-group-text bg-light rounded-0 border-top-0 border-right-0 border-left-0" key={index} >
+                                    <input type="checkbox" className = "question-checkbox" value={question.id} onChange={this.handleRemove}></input>
                                     <Question questionText={question.questionText} questionNumber={index + 1} questionId={+new Date()} />                                    
                                 </div>
                             )

@@ -4,6 +4,7 @@ import { Redirect } from "react-router-dom";
 export default class LeftContent extends React.Component {
     
     render() {
+
         return (
             <div className="wrapper">
                 <nav className="sidebar">
@@ -22,7 +23,7 @@ export default class LeftContent extends React.Component {
                             <button value="removeData" onClick={this.props.onClick}>Remove Questions</button>
                         </li>
                         <li>
-                            <button value="logout" onClick={<Redirect to = "/" />}>Logout</button>
+                            <button value="logout"><a href = "#" className = "admin-logout">Logout</a></button>
                         </li>
                     </ul>
                 </nav>
