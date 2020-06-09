@@ -1,6 +1,6 @@
 import React from 'react';
 import Question from '../Question';
-import { questionsData } from 'D:/Vikrant/aptitude-test/src/data/questions';
+import { questionsData } from 'E:/VSCode Workspace/aptitude-test/src/data/questions.js';
 
 let data = {
     obj: {
